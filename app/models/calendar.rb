@@ -16,8 +16,8 @@ class Calendar
         @calendar_id,
         order_by: "starttime",
         single_events: true,
-        time_min: DateTime.now.beginning_of_day.rfc3339,
-        time_max: DateTime.now.end_of_day.rfc3339).items.map { |item| Event.new(self, item) }
+        time_min: DateTime.now.beginning_of_day.to_s,
+        time_max: DateTime.now.end_of_day.to_s).items.map { |item| Event.new(self, item) }
   end
 
   def as_json

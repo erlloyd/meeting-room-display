@@ -52,7 +52,7 @@ class Event
   private
 
   def parse_begin_time(begin_time)
-    begin_time.presence || Date.current.beginning_of_day + 8.hours
+    begin_time.presence  || Date.current.beginning_of_day + 8.hours
   end
 
   def parse_end_time(end_time)

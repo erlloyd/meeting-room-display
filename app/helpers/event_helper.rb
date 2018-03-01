@@ -8,7 +8,8 @@ module EventHelper
   end
 
   def event_styles(event, previous_event)
-    top = seconds_to_px(event.begin_time.seconds_since_midnight)
+    real_begin_time = event.begin_time + 2.hours
+    top = seconds_to_px(real_begin_time.seconds_since_midnight)
     height = duration_to_px(event.duration)
 
     if consecutive_events?(previous_event, event)
