@@ -25,6 +25,6 @@ module MeetingRoomDisplay
     # Application configuration should go into files in config/initializers
     # -- all .rb files in that directory are automatically loaded.
     config.time_zone = "America/Chicago"
-    config.web_console.whitelisted_ips = '172.17.0.1'
+    config.web_console.whitelisted_ips = '162.248.233.190'
   end
 end
